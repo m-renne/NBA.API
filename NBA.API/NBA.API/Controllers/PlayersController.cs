@@ -13,7 +13,7 @@ namespace NBA.API.Controllers
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            var players = new { test = 2};
+            var players = new { test = 3};
 
             return Request.CreateResponse(HttpStatusCode.OK, players);
         }

@@ -115,7 +115,9 @@
     <Compile Include="Configurations\IConfiguration.cs" />
     <Compile Include="Configurations\Mappings\Mapping.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
+    <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="DomainModels\PlayerModels\Player.cs" />
+    <Compile Include="DomainModels\TeamModels\Team.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -124,8 +126,12 @@
     <Compile Include="Repositories\IDataContext.cs" />
     <Compile Include="Repositories\PlayerRepository\IPlayerRepository.cs" />
     <Compile Include="Repositories\PlayerRepository\PlayerRepository.cs" />
+    <Compile Include="Repositories\TeamRepository\ITeamRepository.cs" />
+    <Compile Include="Repositories\TeamRepository\TeamRepository.cs" />
     <Compile Include="Services\PlayerServices\IPlayerService.cs" />
     <Compile Include="Services\PlayerServices\PlayerService.cs" />
+    <Compile Include="Services\TeamServices\ITeamService.cs" />
+    <Compile Include="Services\TeamServices\TeamService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -17,13 +17,11 @@ namespace NBA.API.Controllers
             PlayerService = playerService;
         }
 
-        [Route("players")]
+        [Route("players/{id}")]
         [HttpGet]
-        public HttpResponseMessage Get()
+        public HttpResponseMessage Get(int id)
         {
-            var players = new { test = 7};
-
-            var player = PlayerService.Get(1);
+            var player = PlayerService.Get(id);
 
             return Request.CreateResponse(HttpStatusCode.OK, player);
         }

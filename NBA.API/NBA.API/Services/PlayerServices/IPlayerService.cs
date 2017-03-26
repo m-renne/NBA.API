@@ -10,5 +10,6 @@ namespace NBA.API.Services.PlayerServices
     public interface IPlayerService
     {
         Player Get(int id);
+        List<Player> Get(PlayerSearchCriteria criteria);
     }
 }

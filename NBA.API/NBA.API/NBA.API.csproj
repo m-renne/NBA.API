@@ -117,6 +117,7 @@
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="DomainModels\PlayerModels\Player.cs" />
+    <Compile Include="DomainModels\PlayerModels\PlayerSearchCriteria.cs" />
     <Compile Include="DomainModels\TeamModels\Team.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

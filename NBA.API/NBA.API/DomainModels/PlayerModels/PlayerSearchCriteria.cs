@@ -5,17 +5,15 @@ using System.Web;
 
 namespace NBA.API.DomainModels.PlayerModels
 {
-    public class Player
+    public class PlayerSearchCriteria
     {
-        public int Id { get; set; }
-
         public int TeamId { get; set; }
 
         public string LastName { get; set; }
 
         public string FirstName { get; set; }
 
-        public int JerseyNumber { get; set; }
+        public int? JerseyNumber { get; set; }
 
         public string Position { get; set; }
 
@@ -23,14 +21,14 @@ namespace NBA.API.DomainModels.PlayerModels
 
         public string Weight { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
 
-        public int Age { get; set; }
+        public int? Age { get; set; }
 
         public string BirthCity { get; set; }
 
         public string BirthCountry { get; set; }
 
-        public bool IsRookie { get; set; }
+        public bool? IsRookie { get; set; }
     }
 }

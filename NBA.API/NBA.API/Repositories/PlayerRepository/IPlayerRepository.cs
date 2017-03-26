@@ -10,5 +10,6 @@ namespace NBA.API.Repositories.PlayerRepository
     public interface IPlayerRepository
     {
         Player Get(int id);
+        List<Player> Get(PlayerSearchCriteria criteria);
     }
 }

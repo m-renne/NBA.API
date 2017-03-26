@@ -21,5 +21,10 @@ namespace NBA.API.Services.PlayerServices
         {
             return Repo.Get(id);
         }
+
+        public List<Player> Get(PlayerSearchCriteria criteria)
+        {
+            return Repo.Get(criteria);
+        }
     }
 }

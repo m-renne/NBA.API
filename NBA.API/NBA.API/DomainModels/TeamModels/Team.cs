@@ -14,5 +14,13 @@ namespace NBA.API.DomainModels.TeamModels
         public string Name { get; set; }
 
         public string Abbrev { get; set; }
+
+        public string Image
+        {
+            get
+            {
+                return $"{HttpContext.Current.Request.Url.Authority}/images/teams/{Abbrev.ToLower()}.png";
+            }
+        }
     }
 }

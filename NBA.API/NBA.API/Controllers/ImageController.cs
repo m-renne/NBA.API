@@ -32,18 +32,26 @@ namespace NBA.API.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
-            
-            string filePath = HostingEnvironment.MapPath(team.Image);
-            FileStream fileStream = new FileStream(filePath, FileMode.Open);
-            Image image = Image.FromStream(fileStream);
-            MemoryStream memoryStream = new MemoryStream();
-            image.Save(memoryStream, ImageFormat.Png);
 
-            var result = new HttpResponseMessage(HttpStatusCode.OK);
-            result.Content = new ByteArrayContent(memoryStream.ToArray());
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue("image/png");
+            try
+            {
+                string filePath = HostingEnvironment.MapPath(team.Image);
+                FileStream fileStream = new FileStream(filePath, FileMode.Open);
+                Image image = Image.FromStream(fileStream);
+                MemoryStream memoryStream = new MemoryStream();
+                image.Save(memoryStream, ImageFormat.Png);
 
-            return result;
+                var result = new HttpResponseMessage(HttpStatusCode.OK);
+                result.Content = new ByteArrayContent(memoryStream.ToArray());
+                result.Content.Headers.ContentType = new MediaTypeHeaderValue("image/png");
+
+                return result;
+            }
+            catch(Exception e)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, e);
+            }
+
         }
     }
 }

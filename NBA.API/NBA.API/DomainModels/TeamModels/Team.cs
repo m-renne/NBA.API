@@ -19,7 +19,7 @@ namespace NBA.API.DomainModels.TeamModels
         {
             get
             {
-                return $"{HttpContext.Current.Request.Url.Authority}/images/teams/{Abbrev.ToLower()}.png";
+                return $"~/Resources/Images/teams/{Abbrev.ToLower()}.png";
             }
         }
     }

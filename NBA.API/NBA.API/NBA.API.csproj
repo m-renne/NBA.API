@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Images\Teams\cle.png" />
+    <Content Include="Resources\Images\Teams\cle.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +115,7 @@
     <Compile Include="Configurations\Configuration.cs" />
     <Compile Include="Configurations\IConfiguration.cs" />
     <Compile Include="Configurations\Mappings\Mapping.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="DomainModels\PlayerModels\Player.cs" />
